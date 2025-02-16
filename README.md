@@ -49,6 +49,12 @@ Detailed descriptions for the **Face Cameras**, **Light Sources**, and **Vertex 
 ## MIT.env FLAG Usage
 - The **FLAG** in **MIT.env** ensures smooth transitions between phases. It ensures that **Phase1** completes before **Phase2** begins, and so on, by tracking when each phase finishes.
 
-![alt text]([(https://github.com/Sukanth-Original/3D_VLM_Captions/blob/main/Panda/face_images/faceCamera1.png)])
+![Face Camera 1](https://github.com/Sukanth-Original/3D_VLM_Captions/blob/main/Panda/face_images/faceCamera1.png?raw=true)
+
+![Vertex Camera 2](https://github.com/Sukanth-Original/3D_VLM_Captions/blob/main/Panda/vertex_images/vertexCamera2.png?raw=true)
+
+![Vertex Camera 4](https://github.com/Sukanth-Original/3D_VLM_Captions/blob/main/cube/vertex_images/vertexCamera4.png?raw=true)
+
+![Face Camera 1 (Cube)](https://github.com/Sukanth-Original/3D_VLM_Captions/blob/main/cube/face_images/faceCamera1.png?raw=true)
 
 ---
