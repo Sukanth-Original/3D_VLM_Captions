@@ -1,98 +1,56 @@
-## 3D_VLM_Captions
+Here’s a suggested way to structure the headings for GitHub:
 
-A Code that generates captions for your 3D Model
+# 3D_VLM_Captions
 
-Uncut Video Demonstration: https://youtu.be/Wop6hv2dUaE
+## Overview
+A code that generates captions for your 3D model. The process is divided into three phases to ensure a smooth workflow from 3D model processing to caption generation.
 
-Usage Instructions:
+## Uncut Video Demonstration
+[Watch the demonstration on YouTube](https://youtu.be/Wop6hv2dUaE)
 
-1. Paste your desired 3D Model in .STL format at "STL_Files" in the directory
-2. Run main.py
-3. Type the name of the model -- "Panda.STL" when prompted to type the name.
-4. Wait for Phase1, Phase2 and Phase3 to end -- to get your desired output.
+## Usage Instructions
 
+### Step 1: Prepare Your 3D Model
+- Place your desired 3D model in .STL format inside the **STL_Files** directory.
 
+### Step 2: Run the Script
+- Run `main.py` and follow the prompts.
 
-#Phase1:
-1. Initialises the environment in Blender
-2. Uses bpy
-3. Initialises the coordinates of the object X, Y, Z - Mid-point of the 3-dimensional volume.
-4. clear_scene() - Clears the scene of any previous objects (meshes, lights, cameras)
-5. add_light_source(b1, b2, b3, name of the light source) - collects the coordinates where it needs to be spawned, the name is specified
-6. import_stl(filename, width of the object) - collects the file to be imported, the width of the object is collected to get normalized to a max width of 20 units
-7. spawn_camera(a, b, c, name of the camera) - collects the coordinates to be spawned in the 3D space
-8. take_snapshot(camera's name, path to export the snapshot) - takes the camera's name and uses this camera and saves it in the specified directory
+### Step 3: Model Name Input
+- When prompted, type the name of the model (e.g., "Panda.STL").
 
-Positions of the Face Cameras:
-    ("faceCamera1", (X + d2, Y, Z)),
-    ("faceCamera2", (X - d2, Y, Z)),
-    ("faceCamera3", (X, Y + d2, Z)),
-    ("faceCamera4", (X, Y - d2, Z)),
-    ("faceCamera5", (X, Y, Z + d2)),
-    ("faceCamera6", (X, Y, Z - d2))
+### Step 4: Wait for Phases to Complete
+- Wait for **Phase1**, **Phase2**, and **Phase3** to finish processing, which will generate the desired output.
 
-Where d2 is an offset, d2 is determined by 1.25*(height+width+height)
+## Code Design
 
-Positions of the Light Sources:
+## Phase 1: 3D Model Setup in Blender
+- **Initializes the environment in Blender using bpy**
+- **Coordinates Calculation**: Determines the X, Y, Z midpoint of the 3D model
+- **Scene Initialization**: Clears any previous objects (meshes, lights, cameras)
+- **Lighting Setup**: Adds light sources at specific coordinates
+- **Camera Setup**: Adds cameras at predefined positions
+- **Snapshot Creation**: Captures snapshots from 14 different camera angles and saves them to the specified directory
 
-    ("lightSource1", (X + d1, Y+3, Z)),
-    ("lightSource2", (X - d1, Y+3, Z)),
-    ("lightSource3", (X, Y + d1, Z+3)),
-    ("lightSource4", (X, Y - d1, Z+3)),
-    ("lightSource5", (X+3, Y, Z + d1)),
-    ("lightSource6", (X+3, Y, Z - d1)),
-    ("lightSource7", (X - d1_root3, Y - d1_root3, Z - d1_root3)),
-    ("lightSource8", (X - d1_root3, Y - d1_root3, Z + d1_root3)),
-    ("lightSource9", (X - d1_root3, Y + d1_root3, Z - d1_root3)),
-    ("lightSource10", (X - d1_root3, Y + d1_root3, Z + d1_root3)),
-    ("lightSource11", (X + d1_root3, Y - d1_root3, Z - d1_root3)),
-    ("lightSource12", (X + d1_root3, Y - d1_root3, Z + d1_root3)),
-    ("lightSource13", (X + d1_root3, Y + d1_root3, Z - d1_root3)),
-    ("lightSource14", (X + d1_root3, Y + d1_root3, Z + d1_root3))
+### Camera and Light Positions
+Detailed descriptions for the **Face Cameras**, **Light Sources**, and **Vertex Cameras** used for the snapshots.
 
-Where d1 is an offset, d1 is determined by (height+width+height)/2
-d1_root3 = d1 / math.sqrt(3)
+## Phase 2: Caption Generation Using VLM
+- **VLM Integration**: Uses OpenRouter with Google Gemini 2.0 to generate captions for all 14 images.
+- **Flexible Model Choice**: Google Gemini 2.0 Flash is used by default, but the model can be swapped as needed.
 
-Positions of the Vertex Cameras:
+## Phase 3: Summary Caption Generation
+- **Caption Summarization**: Google Gemini 2.0 processes the captions from all 14 snapshots and generates a comprehensive caption summarizing the entire 3D model.
 
-    ("vertexCamera1", (X - d2_root3, Y - d2_root3, Z - d2_root3)),
-    ("vertexCamera2", (X - d2_root3, Y - d2_root3, Z + d2_root3)),
-    ("vertexCamera3", (X - d2_root3, Y + d2_root3, Z - d2_root3)),
-    ("vertexCamera4", (X - d2_root3, Y + d2_root3, Z + d2_root3)),
-    ("vertexCamera5", (X + d2_root3, Y - d2_root3, Z - d2_root3)),
-    ("vertexCamera6", (X + d2_root3, Y - d2_root3, Z + d2_root3)),
-    ("vertexCamera7", (X + d2_root3, Y + d2_root3, Z - d2_root3)),
-    ("vertexCamera8", (X + d2_root3, Y + d2_root3, Z + d2_root3))
+## main.py: Script Flow
+- Executes all phases in sequential order: **Phase 1**, **Phase 2**, **Phase 3**.
 
-d2_root3 = d2 / math.sqrt(3)
+## config.py: Centralized Directory Management
+- Ensures easy communication of directory paths across all three phases to maintain a centralized approach and prevent issues caused by Blender's independent Python environment.
 
-Run Flow:
+## MIT.env FLAG Usage
+- The **FLAG** in **MIT.env** ensures smooth transitions between phases. It ensures that **Phase1** completes before **Phase2** begins, and so on, by tracking when each phase finishes.
 
-1. Spawn all the objects - object of interest, light sources and cameras (14)
-2. Use take_snapshot to take photos from all 14 angles
+---
 
-#Phase 2:
-1. Uses a VLM through OpenRouter to generate captions of all the 14 images.
-2. Google Gemini 2.0 Flash was used but the model is easily swapable
-
-#Phase 3:
-1. Uses Google Gemini 2.0 to collect all the 14 captions and summarises into one caption of the entire 3D model.
-
-#Main.py:
-
-Runs all the above code in the sequential order:
-1. Phase1
-2. Phase2
-3. Phase3
-
-#Purpose of config.py:
-For easy communication of directories changing throughout all 3 phases.
-This prevents sequential flow of information and establishes a centralized approach.
-This addresses a potential issue with bpy (Blender) -- Runs in it's own Python instead of using the IDE's Python
-So this makes sure the codes are independent.
-
-#Purpose of FLAG in MIT.env:
-Phase1 runs independently and gets hard to track when the code gets over. Blender's Python is relatively less controllable and led to potential issues where the code wouldn't stop after finishes running or main.py proceeds to the Phase2 before completing Phase1 -- main.py is unaware of happenings of Phase1
-
-FLAG makes sure that when Phase1 code ends, Phase2 starts. and so on.
-
+Feel free to adjust this based on your specific needs or repository layout!
