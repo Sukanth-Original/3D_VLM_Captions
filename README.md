@@ -1,5 +1,3 @@
-Here’s a suggested way to structure the headings for GitHub:
-
 # 3D_VLM_Captions
 
 ## Overview
