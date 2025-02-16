@@ -52,5 +52,3 @@ Detailed descriptions for the **Face Cameras**, **Light Sources**, and **Vertex 
 - The **FLAG** in **MIT.env** ensures smooth transitions between phases. It ensures that **Phase1** completes before **Phase2** begins, and so on, by tracking when each phase finishes.
 
 ---
-
-Feel free to adjust this based on your specific needs or repository layout!
