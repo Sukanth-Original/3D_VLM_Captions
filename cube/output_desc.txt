@@ -1,0 +1,36 @@
+Angle from 1 of 8 Vertices: "Here's a technical caption analyzing the image:
+
+The image depicts a 3D model of a cube with angular indentations. The front face presents stylized letter forms, possibly a monogram, while an "X" design dominates the right face. The model employs a neutral gray material, utilizing basic lighting to convey volume. The perspective allows us to view aspects of the cube from the angle of near corner.
+"
+Angle from 2 of 8 Vertices: "The image depicts a 3D geometric model of a cube, constructed with a gray material. The cube's faces are cut with letter-shaped voids: "CH," "Z, " and "X." The model is positioned against a neutral gray background, and the lighting suggests the model is a digital rendering, using light and shadow to accentuate the geometric forms."
+Angle from 3 of 8 Vertices: "This 3D model shows an isometric view of a cube with a logo cut into one of its faces. The logo utilizes a negative space design. It has a low-poly style, smooth shading and a soft light source, making the surface reflect light gradually. The model's perspective is from a low point of view. The cube shape and logo design are highly recognizable.
+"
+Angle from 4 of 8 Vertices: "Here are the descriptions:
+
+The image showcases a 3D model of a cube with raised lettering. The angle highlights four vertices of the cube, revealing the lettering "NZ" on the top face and "CHEP" on the side face. The model is rendered in a grayscale palette.
+"
+Angle from 5 of 8 Vertices: "The image showcases a 3D model, likely created using a graphics software. The model appears to be a cube with cut-out geometric shapes. The composition emphasizes the vertices of the cube. The lighting and shading suggest a neutral color palette, and smooth surfaces. The model's design focuses on angles and the negative space created by the shapes.
+"
+Angle from 6 of 8 Vertices: "A 3D model of a cube is shown with inset letters. The letters on the faces of the cube are 'Z', 'X', and 'Y'. The model is rendered in a solid, flat gray color and is positioned at an angle. Subtle highlights indicate a light source. The background is a darker shade of gray.
+"
+Angle from 7 of 8 Vertices: "Here's a technical caption for the image:
+
+The 3D model presents a cube with a distinct geometric design on one face, resembling an abstract "Y" shape cut into the surface. Lighting introduces subtle gradients, accentuating the form and conveying the model's volume within a 3D space. The model's sharp edges suggest a polygonal construction.
+"
+Angle from 8 of 8 Vertices: "Here's a technical caption for the image:
+
+"A 3D model of a cube is presented, featuring two stylized letter cutouts. The cube appears to be rendered with a grayscale material and lighting, creating highlights and shadows. The camera angle captures the cube with a notable perspective, showcasing the depth and the geometric form."
+"
+Angle from 1 of 6 Faces: "Here's a 50-word technical caption for the image:
+
+Generated view captures an angled perspective of one face of a 3D model rendering.  The model presents a square-shaped plate.  Embedded within the surface is the letter "Y".  The render employs smooth shading, and ambient light source, enhancing the visual texture and depth of the letter's recessed shape and the model.    
+"
+Angle from 2 of 6 Faces: "The 3D model is presented at a shallow angle, revealing the side and front faces. The design, a stylized representation of "CHEP," is rendered in a monochrome palette. The illumination casts soft shadows from the beveled edges, accentuating the model's geometry and the depth of the recessed pattern."
+Angle from 3 of 6 Faces: "This is an example of a 3D model rendering.  The image depicts a solid grey rectangular plane.  The shading suggests a light source illuminating the surface, resulting in subtle gradients. Shadows and highlights indicate the surface has an orientation. The surrounding background is darker. The plane could be rotated about multiple axes.
+"
+Angle from 4 of 6 Faces: "Here's a 50-word technical caption for the image:
+
+This is a 3D rendering of a gray square with an "X" cutout. The lighting creates soft highlights and shadows, revealing the interplay of planes and angles. Perspective is from four of the six faces of the solid 3D model. The rendering captures a matte surface, which enhances the overall visual experience.
+"
+Angle from 5 of 6 Faces: "Caption generation failed"
+Angle from 6 of 6 Faces: "Caption generation failed"
