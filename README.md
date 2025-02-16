@@ -20,6 +20,8 @@ A code that generates captions for your 3D model. The process is divided into th
 ### Step 4: Wait for Phases to Complete
 - Wait for **Phase1**, **Phase2**, and **Phase3** to finish processing, which will generate the desired output.
 
+---
+
 ## Code Design
 
 ## Phase 1: 3D Model Setup in Blender
@@ -48,6 +50,9 @@ Detailed descriptions for the **Face Cameras**, **Light Sources**, and **Vertex 
 
 ## MIT.env FLAG Usage
 - The **FLAG** in **MIT.env** ensures smooth transitions between phases. It ensures that **Phase1** completes before **Phase2** begins, and so on, by tracking when each phase finishes.
+
+---
+
 
 ## STL_Files/skull.stl
 
