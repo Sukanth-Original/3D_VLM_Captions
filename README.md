@@ -79,3 +79,4 @@ Output: "This 3D model is a stylized bear rendering, constructed from simplified
 
 
 ---
+*A Sukanth Original Design, 2025*
